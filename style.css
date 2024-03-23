@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.light {
+	--secondary: #f1f8fc; /* Background color */
+	--dark-primary: #312f3a;
+	--dark-secondary: #45424b;
+	--light-primary: #919191;
+	--light-secondary: #aaa;
+}
+
+.dark {
+	--secondary: #192e3a; /* Background color */
+	--dark-primary: #f3f3f3;
+	--dark-secondary: #fff;
+	--light-primary: #ccc;
+	--light-secondary: #e7e3e3;
+}
+
+:root {
+	background-color: var(--secondary);
+	--primary: #64bcf4; /* Main color */
+	--hover: #5bacdf;
+}
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.big-wrapper {
+	position: relative;
+	padding: 1.7rem 0 2rem;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	background-color: var(--secondary);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container {
+	position: relative;
+	max-width: 81rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 3rem;
+	z-index: 10;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+header {
+	position: relative;
+	z-index: 70;
+}
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.overlay {
+	display: none;
+}
+
+.logo img {
+	width: 40px;
+	margin-right: 0.6rem;
+	margin-top: -0.6rem;
+}
+
+.logo h3 {
+	color: var(--dark-secondary);
+	font-size: 1.55rem;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+.links ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	gap: 4.5rem;
+}
+
+.links a {
+	color: var(--light-secondary);
+	transition: 0.3s;
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.links a:hover {
+	color: var(--hover);
+	transform: scale(1.05);
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.9rem 1.9rem;
+	color: white !important;
+	background-color: var(--primary);
+	border-radius: 16px;
+	text-transform: capitalize;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-color: var(--hover);
+	transform: scale(1) !important;
+}
+
+.showcase-area .container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	justify-content: center;
+}
+
+.big-title {
+	font-size: 1.4rem;
+	color: var(--dark-primary);
+	text-transform: capitalize;
+	line-height: 1.4;
+}
+
+.text {
+	color: var(--light-primary);
+	font-size: 1.1rem;
+	margin: 1.9rem 0 2.5rem;
+	max-width: 600px;
+	line-height: 2.3;
+}
+
+.showcase-area .btn {
+	box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+.person {
+	width: 123%;
+	transform: translate(15% 25px);
+}
+
+.toggle-btn {
+	display: inline-block;
+	border: none;
+	background-color: var(--dark-secondary);
+	color: var(--secondary);
+	outline: none;
+	cursor: pointer;
+	height: 39px;
+	width: 39px;
+	border-radius: 50%;
+	font-size: 1.4rem;
+	transition: 0.3s;
+	position: fixed;
+	bottom: 10%;
+	left: 10%;
+}
+.toggle-btn:hover {
+	background-color: var(--primary);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+		0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.stop-scrolling {
+	height: 100vh;
+	overflow: hidden;
+}
+.toggle-btn i {
+	line-height: 39px;
+}
+
+.toggle-btn i:last-child {
+	display: none;
+}
+
+.big-wrapper.dark .toggle-btn i:first-child, /* Moon */
+.big-wrapper.light .toggle-btn i:last-child  /* Sun */ {
+	display: none;
+}
+
+.big-wrapper.light .toggle-btn i:first-child,
+.big-wrapper.dark .toggle-btn i:last-child {
+	display: block;
+}
+
+.shape {
+	position: absolute;
+	z-index: 0;
+	width: 500px;
+	bottom: -180px;
+	left: -15px;
+	opacity: 0.1;
+}
+
+.copy {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	animation: appear 1s 1 both;
+}
+.hamburger-menu {
+	position: relative;
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	display: none;
+}
+.hamburger-menu .bar {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	background-color: var(--dark-secondary);
+	border-radius: 3px;
+	transition: 0.5s;
+}
+
+.bar::before,
+.bar::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark-secondary);
+	border-radius: 3px;
+	transition: 0.5s;
+}
+.bar::before {
+	transform: translateY(-8px);
+}
+.bar::after {
+	transform: translateY(8px);
+}
+.big-wrapper.active .hamburger-menu .bar {
+	background-color: transparent;
+}
+.big-wrapper.active .bar::before {
+	transform: translateY(0) rotate(-45deg);
+}
+.big-wrapper.active .bar::after {
+	transform: translateY(0) rotate(45deg);
+}
+
+@keyframes appear {
+	0% {
+		clip-path: circle(30% at -25% -25%);
+	}
+
+	100% {
+		clip-path: circle(150% at 0 0);
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.big-title {
+		margin-top: 140px;
+	}
+	.links {
+		position: fixed;
+		top: 0;
+		right: 0;
+		max-width: 450px;
+		width: 100%;
+		height: 100%;
+		background-color: var(--primary);
+		z-index: 95;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(100%);
+		transition: 0.5s;
+	}
+	.links a {
+		color: #fff;
+		margin-left: 0;
+		padding: 2rem 0;
+	}
+	.links a:hover,
+	.links .btn :hover {
+		color: #312f3a !important;
+	}
+	.links ul {
+		flex-direction: column;
+		gap: 0;
+	}
+	.hamburger-menu {
+		display: flex;
+	}
+	.links .btn {
+		background: none;
+	}
+
+	.overlay {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #000000b3;
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.5s;
+	}
+	.big-wrapper.active .links {
+		transform: translateX(0);
+		box-shadow: 0 0 50px 2px #00000066;
+	}
+	.big-wrapper.active .overlay {
+		pointer-events: all;
+		opacity: 1;
+	}
+	.showcase-area .container {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		gap: 2rem;
+	}
+	.big-title {
+		font-size: 1.1rem;
+	}
+	.person {
+		width: 100%;
+		transform: none;
+	}
+	.logo h3 {
+		font-size: 1.25rem;
+	}
+	.shape {
+		bottom: -180px;
+		left: -150px;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.container {
+		padding: 0 1.5rem;
+	}
+	.big-title {
+		font-size: 0.9rem;
+	}
+	.text {
+		margin: 1.1rem 0 1.5rem;
+	}
+	.showcase-area .btn {
+		font-size: 0.8rem;
+	}
+}
