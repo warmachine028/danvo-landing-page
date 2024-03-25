@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .light {
 	--secondary: #f1f8fc; /* Background color */
@@ -28,19 +28,15 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
-
 img {
 	width: 100%;
 }
-
 a {
 	text-decoration: none;
 }
-
 .big-wrapper {
 	position: relative;
 	padding: 1.7rem 0 2rem;
@@ -52,7 +48,6 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 }
-
 .container {
 	position: relative;
 	max-width: 81rem;
@@ -61,7 +56,6 @@ a {
 	padding: 0 3rem;
 	z-index: 10;
 }
-
 .logo {
 	display: flex;
 	align-items: center;
@@ -79,39 +73,33 @@ header .container {
 .overlay {
 	display: none;
 }
-
 .logo img {
 	width: 40px;
 	margin-right: 0.6rem;
 	margin-top: -0.6rem;
 }
-
 .logo h3 {
 	color: var(--dark-secondary);
 	font-size: 1.55rem;
 	line-height: 1.2;
 	font-weight: 700;
 }
-
 .links ul {
 	display: flex;
 	list-style: none;
 	align-items: center;
 	gap: 4.5rem;
 }
-
 .links a {
 	color: var(--light-secondary);
 	transition: 0.3s;
 	display: inline-block;
 	transition: 0.3s;
 }
-
 .links a:hover {
 	color: var(--hover);
 	transform: scale(1.05);
 }
-
 .btn {
 	display: inline-block;
 	padding: 0.9rem 1.9rem;
@@ -121,26 +109,22 @@ header .container {
 	text-transform: capitalize;
 	transition: 0.3s;
 }
-
 .btn:hover {
 	background-color: var(--hover);
 	transform: scale(1) !important;
 }
-
 .showcase-area .container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	justify-content: center;
 }
-
 .big-title {
 	font-size: 1.4rem;
 	color: var(--dark-primary);
 	text-transform: capitalize;
 	line-height: 1.4;
 }
-
 .text {
 	color: var(--light-primary);
 	font-size: 1.1rem;
@@ -148,16 +132,13 @@ header .container {
 	max-width: 600px;
 	line-height: 2.3;
 }
-
 .showcase-area .btn {
 	box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
 }
-
 .person {
 	width: 123%;
 	transform: translate(15% 25px);
 }
-
 .toggle-btn {
 	display: inline-block;
 	border: none;
@@ -176,8 +157,7 @@ header .container {
 }
 .toggle-btn:hover {
 	background-color: var(--primary);
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-		0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .stop-scrolling {
 	height: 100vh;
@@ -186,21 +166,17 @@ header .container {
 .toggle-btn i {
 	line-height: 39px;
 }
-
 .toggle-btn i:last-child {
 	display: none;
 }
-
 .big-wrapper.dark .toggle-btn i:first-child, /* Moon */
 .big-wrapper.light .toggle-btn i:last-child  /* Sun */ {
 	display: none;
 }
-
 .big-wrapper.light .toggle-btn i:first-child,
 .big-wrapper.dark .toggle-btn i:last-child {
 	display: block;
 }
-
 .shape {
 	position: absolute;
 	z-index: 0;
@@ -209,7 +185,6 @@ header .container {
 	left: -15px;
 	opacity: 0.1;
 }
-
 .copy {
 	position: absolute;
 	top: 0;
@@ -236,10 +211,9 @@ header .container {
 	border-radius: 3px;
 	transition: 0.5s;
 }
-
 .bar::before,
 .bar::after {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -267,7 +241,6 @@ header .container {
 	0% {
 		clip-path: circle(30% at -25% -25%);
 	}
-
 	100% {
 		clip-path: circle(150% at 0 0);
 	}
@@ -311,7 +284,6 @@ header .container {
 	.links .btn {
 		background: none;
 	}
-
 	.overlay {
 		display: block;
 		position: fixed;
