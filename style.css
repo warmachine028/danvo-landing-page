@@ -323,6 +323,10 @@ header .container {
 		bottom: -180px;
 		left: -150px;
 	}
+	.toggle-btn {
+		bottom: 5%;
+	}
+	
 }
 
 @media screen and (max-width: 470px) {
