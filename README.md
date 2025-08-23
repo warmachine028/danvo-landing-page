@@ -1,4 +1,4 @@
-    updated on: 15th August 2025, Friday
+    updated on: 23rd August 2025, Saturday
 
 <div align=center>
     <a href="https://github.com/warmachine028/danvo-landing-page">
@@ -79,4 +79,4 @@
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 
 [License]: https://github.com/warmachine028/danvo-landing-page/blob/main/LICENSE
-<!-- 15/08/25 -->
+<!-- 23/08/25 -->
